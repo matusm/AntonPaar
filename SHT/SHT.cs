@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace AntonPaar
 {
@@ -39,7 +35,6 @@ namespace AntonPaar
 
         }
 
-
         static void UpdateView(object sender, EventArgs e)
         {
             Thread.CurrentThread.CurrentCulture = new CultureInfo("en-US");
@@ -48,10 +43,6 @@ namespace AntonPaar
             double t = (ob.MeasurementTimeStamp - ob.InitTimeStamp).TotalSeconds;
             string line = string.Format("{0,8:F1} {1,9:F4} {2,9:F4} {3}", t, ob.Temperature1, ob.Temperature2, ob.SHT);
             Console.WriteLine(line);
-
-            //hFile = File.AppendText(sFileName);
-            //hFile.WriteLine(line);
-            //hFile.Close();
         }
 
 

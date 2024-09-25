@@ -8,15 +8,12 @@ namespace AntonPaar
 {
 	public class AntonPaarRS232 : AntonPaar
 	{
-		#region Private fields
 		private SerialPort portCOM;
 		private const int DELAY = 150;
 		private const int MAXLOOP = 50;
 		private bool bConnected;
 		private string instrumentResponse;
-		#endregion
 
-		#region Ctor
 		public AntonPaarRS232(string host) : base()
 		{
 			instrumentPort = host.Trim().ToUpper();
@@ -36,9 +33,6 @@ namespace AntonPaar
 				bConnected = false;
 			}
 		}
-		#endregion
-
-		#region Public methods
 
 		/// <summary>
 		/// Sets display mode to resistance.
@@ -138,9 +132,7 @@ namespace AntonPaar
 			return sht;
 		}
 
-		#endregion
 
-		#region Private methods
 		/// <summary>
 		/// Loads the data string from the instrument.
 		/// </summary>
@@ -195,7 +187,7 @@ namespace AntonPaar
 			return true;
 		}
 
-		#region Private methods - query instrument
+
 
 		bool QuerySensorValuesAndID()
 		{
@@ -225,9 +217,7 @@ namespace AntonPaar
 			return true;
 		}
 
-		#endregion
 
-		#region Private methods - string parsing
 
 		bool ParseVersion()
 		{
@@ -360,9 +350,6 @@ namespace AntonPaar
 			return x;
 		}
 
-		#endregion
-
-		#region Private methods - basic serial port functions
 
 		/// <summary>
 		/// Sends a command to the instrument and stores the response in the private <c>instrumentResponse</c> string.
@@ -444,8 +431,5 @@ namespace AntonPaar
 			}
 		}
 
-		#endregion
-
-		#endregion
 	}
 }

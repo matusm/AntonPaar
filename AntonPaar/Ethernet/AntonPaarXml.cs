@@ -8,15 +8,13 @@ namespace AntonPaar
     public class AntonPaarXml : AntonPaar
     {
 
-		#region Private fields
 		// URI to connect to instrument
 		Uri instrumentUri;
         // fields for XML work
         string instrumentResponse;
         XmlDocument xmlDoc = new XmlDocument();
-		#endregion
 
-		#region Ctor
+
 		public AntonPaarXml(string host):base()
         {
             // build the fully qualified URI from the host name
@@ -28,7 +26,6 @@ namespace AntonPaar
             // load and parse the data for the very first time
             _UpdateValues(true);
         }
-        #endregion
 
         #region Private methods
 		/// <summary>

@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Threading;
-using System.Globalization;
-using System.IO;
 using Bev.Transmitter;
 
 namespace AntonPaar
 {
     class Program
     {
-        static string sFileName;
-        static StreamWriter hFile;
 
         static void Main(string[] args)
         {
